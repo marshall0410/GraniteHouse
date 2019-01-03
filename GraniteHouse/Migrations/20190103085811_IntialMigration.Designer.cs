@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace GraniteHouse.Data.Migrations
+namespace GraniteHouse.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190101230912_AddedProductTypesToDb")]
-    partial class AddedProductTypesToDb
+    [Migration("20190103085811_IntialMigration")]
+    partial class IntialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,13 +21,14 @@ namespace GraniteHouse.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("GraniteHouse.Data.ProductTypes", b =>
+            modelBuilder.Entity("GraniteHouse.Models.ProductTypes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ProductName");
+                    b.Property<string>("ProductName")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
