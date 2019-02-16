@@ -1,0 +1,35 @@
+﻿@model IEnumerable<GraniteHouse.Models.SpecialTags>
+@{
+            ViewData["Title"] = "Index";
+}
+<br />
+<br />
+<div class="Container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Special Tags List</h2>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-info float-right" href="#">New Special Tag</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(m =>  m.Name)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+            <tr>                
+                <td>@Html.DisplayFor(m => item.Name)</td>
+                <partial name="TableButtonPartial" />
+            </tr>
+            }            
+        </tbody>
+    </table>
+</div>
+
+
