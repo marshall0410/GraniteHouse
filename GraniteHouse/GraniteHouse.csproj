@@ -8,6 +8,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20190216181031_AddedSpecialTagsToDB.cs" />
     <Compile Remove="Migrations\20190216181031_AddedSpecialTagsToDB.Designer.cs" />
+    <Compile Remove="Migrations\20190220043027_AddProductsToDB.cs" />
+    <Compile Remove="Migrations\20190220043027_AddProductsToDB.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +20,12 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Areas\Admin\Controllers\SpecialTagsController.cs">
+      <Generator>`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````</Generator>
+    </Compile>
   </ItemGroup>
 
 </Project>

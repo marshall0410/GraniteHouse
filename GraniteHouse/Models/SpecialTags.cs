@@ -8,7 +8,6 @@ namespace GraniteHouse.Models
 {
     public class SpecialTags 
     {
-
         public int Id { get; set; }
         
         [Required]

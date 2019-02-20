@@ -6,7 +6,7 @@ using GraniteHouse.Data;
 using GraniteHouse.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GraniteHouse.Areas.Admin.Controllers
+namespace GraniteHouse.Controllers
 {
     [Area("Admin")]
     public class ProductTypesController : Controller
@@ -19,7 +19,7 @@ namespace GraniteHouse.Areas.Admin.Controllers
         }
 
         public IActionResult Index()
-        {
+        {            
             return View(_db.ProductTypes.ToList());
         }
 
